@@ -11,5 +11,11 @@ pipeline{
                 echo " this is the integration testting"
             }
         }
+        stage('this is the mohan will'){
+            steps{
+                echo "thie is the mohan"
+            }
+        }
+
     }
 }

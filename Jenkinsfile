@@ -13,6 +13,14 @@ pipeline{
                 
             }
         }
+        stage('themohan credentials'){
+            environment{
+                AUTH=credentials('ssh1')
+            }
+            steps{
+                echo "$AUTH"
+            }
+        }
    
 
     }

@@ -12,7 +12,7 @@ pipeline{
        stage('zipping stage'){
              steps{
                 echo 'building the package'
-                sh 'zip -r ./* --exclude=.git --exclude=.js'
+                sh 'zip -r  catalogue.zip ./* --exclude=.git --exclude=.js'
         }
        }
        stage('nexus-artifact uploader'){

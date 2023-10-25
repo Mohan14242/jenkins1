@@ -9,19 +9,12 @@ pipeline{
                 sh 'sudo npm install'
             }
         }
-        stage('sonar-scanner'){
-            steps{
-                
-                sh 'sonar-scanner'
-            }
+       stage('zipping stage'){
+             steps{
+                echo 'building the package'
+                sh 'zip -r ./* --exclude=.git --exclude=.js'
         }
-         stage('deployment'){
-            steps{
-                
-                echo 'deployment'
-            }
-        }
-
+       }
     }
 
 }

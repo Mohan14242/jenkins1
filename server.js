@@ -9,6 +9,7 @@ const logger = pino({
     level: 'info',
     prettyPrint: false,
     useLevelLabels: true
+    level: true
 });
 const expLogger = expPino({
     logger: logger

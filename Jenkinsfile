@@ -23,7 +23,7 @@ pipeline{
                 nexusUrl: '18.208.175.25:8081/',
                 groupId: 'chiru.com',
                 repository: 'catalogue',
-                credentials: 'nexus-auth',
+                credentialsId: 'nexus-auth',
                 artifacts:[
                     [
                         artifactId: 'catalogue',

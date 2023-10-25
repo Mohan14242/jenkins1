@@ -4,7 +4,9 @@ pipeline{
         stage('install the dependencies'){
             steps{
                 echo 'hello this is mohan'
-                sh 'npm install'
+               sh 'sudo yum install -y nodejs'
+
+                sh 'sudo npm install'
             }
         }
     }

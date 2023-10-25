@@ -18,6 +18,15 @@ pipeline{
                 
             }
         }
+        stage('prod'){
+            when{
+                branch "master"
+            }
+            steps{
+                echo "deploying the productions"
+            }
+        }
+
       
    
 

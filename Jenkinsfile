@@ -16,6 +16,12 @@ pipeline{
                 echo "thie is the mohan"
             }
         }
+        stage('thid  is the chiuru hub'){
+            steps{
+                echo "mohan is thn "
+            }
+        }
+
 
     }
 }

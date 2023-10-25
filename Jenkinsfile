@@ -1,7 +1,7 @@
 pipeline{
     agent any 
     options {
-        timeout(time:1 ,units:'MINUTES')
+        timeout(time:1 ,unit:'MINUTES')
     }
     stages{
         stage('terraform init'){

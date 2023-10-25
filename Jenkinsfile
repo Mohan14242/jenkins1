@@ -21,6 +21,11 @@ pipeline{
                 echo "mohan is thn "
             }
         }
+        stage('this is the moha'){
+            steps{
+                echo "the mohan"
+            }
+        }
 
 
     }

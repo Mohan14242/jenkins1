@@ -14,7 +14,9 @@ pipeline{
             }
         }
         stage('pemission neede'){
-            input "do you want to proceed"
+            steps{
+                input "do you want to proceed"
+            }
         }
 
 

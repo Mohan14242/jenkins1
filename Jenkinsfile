@@ -1,62 +1,12 @@
 pipeline{
-    agent any 
-    environment{
-        USER='mohan'
-    }
-   
-    triggers{
-        cron('* * * * *')
-    }
-    parameters{
-        string(name:'person',defaultValue:'mohan',description:'please enter your name')
-        choice(name:"environment",choices:["dev","test","prod"],description:'please select your environemnt')
-    }
+    agent { node { label 'mohan'}}
     stages{
-        stage('terraform init'){
+        stage('install the dependencies'){
             steps{
-                echo "$USER is best one and the person who is executed id $params.person"
-                
+                echo 'hello this is mohan'
+                sh 'npm install'
             }
         }
-        stage('prod'){
-            when{
-                branch "master"
-            }
-            steps{
-                echo "deploying the productions"
-            }
-        }
-        stage('parralel stage'){
-            parallel{
-                stage('paralle1'){
-                    steps{
-                        echo "parallel 1"
-                    }
-                }
-                stage('paralle2'){
-                    steps{
-                        echo "thiis parallel 2"
-                    }
-                }
-                stage('2 more'){
-                    stages{
-                        stage('paralle3l'){
-                            steps{
-                                echo 'thhis is tehmohan'
-                            }
-                        }
-                        stage('paralel4'){
-                            steps{
-                                echo 'this is the sus'
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-      
-   
-
     }
+
 }

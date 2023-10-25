@@ -10,16 +10,7 @@ pipeline{
                 
             }
         }
-        stage('terraform plan'){
-            steps{
-                
-            }
-        }
-        stage('pemission neede'){
-            steps{
-                
-            }
-        }
+   
 
     }
 }

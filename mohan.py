@@ -14,3 +14,4 @@ n = 100
 prime_list = sieve_of_eratosthenes(n)
 print(f"Prime numbers less than or equal to {n}:")
 print(prime_list)
+sieve_of_eratosthenes()

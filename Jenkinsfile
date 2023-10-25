@@ -13,6 +13,9 @@ pipeline{
                 terraform plan'''
             }
         }
+        stage{
+            input "do you want to proceed"
+        }
 
 
 

@@ -6,23 +6,20 @@ pipeline{
     stages{
         stage('terraform init'){
             steps{
-                sh ''' 
-                    terraform init'''
+                echo "mmoha is the best"
+                
             }
         }
         stage('terraform plan'){
             steps{
-                sh '''
-                terraform plan'''
+                
             }
         }
         stage('pemission neede'){
             steps{
-                input "do you want to proceed"
+                
             }
         }
-
-
 
     }
 }

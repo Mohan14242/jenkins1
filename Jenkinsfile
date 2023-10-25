@@ -7,7 +7,7 @@ pipeline{
         timeout(time:1 ,unit:'MINUTES')
     }
     parameters{
-        string(name:'person',defaultvalue:'mohan',description:'please enter your name')
+        string(name:'person',defaultValue:'mohan',description:'please enter your name')
     }
     stages{
         stage('terraform init'){

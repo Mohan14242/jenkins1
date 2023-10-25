@@ -20,7 +20,7 @@ pipeline{
             nexusArtifactUploader(
                 nexusVersion: 'catalogue3',
                 protocol: 'http',
-                nexusUrl: '18.208.175.25:8081/',
+                nexusUrl: '18.208.175.25:8081/repository/catalogue/'
                 groupId: 'chiru.com',
                 version: '11.1.0',
                 repository: 'catalogue',

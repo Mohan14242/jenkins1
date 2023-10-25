@@ -13,7 +13,7 @@ pipeline{
                 terraform plan'''
             }
         }
-        stage{
+        stage('pemission neede'){
             input "do you want to proceed"
         }
 

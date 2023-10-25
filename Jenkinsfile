@@ -3,8 +3,9 @@ pipeline{
     environment{
         USER='mohan'
     }
-    options {
-        timeout(time:1 ,unit:'MINUTES')
+   
+    triggers{
+        cron('* * * * *')
     }
     parameters{
         string(name:'person',defaultValue:'mohan',description:'please enter your name')

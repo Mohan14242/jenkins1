@@ -15,6 +15,28 @@ pipeline{
                 sh 'zip -r ./* --exclude=.git --exclude=.js'
         }
        }
+       stage('nexus-artifact uploader'){
+        steps{
+            nexusArtifactUploader(
+                nexusVersion: 'catalogue3',
+                protocol: 'http',
+                nexusUrl: '18.208.175.25:8081/',
+                groupId: 'chiru.com',
+                repository: 'catalogue',
+                credentials: 'nexus-auth',
+                artifacts:[
+                    [
+                        artifactId: 'catalogue',
+                        classifier: '',
+                        file: 'catalogue.zip',
+                        type: 'zip'
+                    ]
+                ]
+
+
+            )
+        }
+       }
     }
     post{
         always{

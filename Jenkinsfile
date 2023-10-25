@@ -15,6 +15,7 @@ pipeline{
                 sh 'sonar-scanner'
             }
         }
+        
     }
 
 }

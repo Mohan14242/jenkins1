@@ -6,6 +6,9 @@ pipeline{
     options {
         timeout(time:1 ,unit:'MINUTES')
     }
+    parameters{
+        string(name:'person',defaultvalue:'mohan',description:'please enter your name')
+    }
     stages{
         stage('terraform init'){
             steps{

@@ -26,6 +26,34 @@ pipeline{
                 echo "deploying the productions"
             }
         }
+        stage('parralel stage'){
+            parralel{
+                stage('paralle1'){
+                    steps{
+                        echo "parallel 1"
+                    }
+                }
+                stage('paralle2'){
+                    steps{
+                        echo "thiis parallel 2"
+                    }
+                }
+                stage('2 more'){
+                    stages{
+                        stage('paralle3l'){
+                            steps{
+                                echo 'thhis is tehmohan'
+                            }
+                        }
+                        stage('paralel4'){
+                            steps{
+                                echo 'this is the sus'
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
       
    

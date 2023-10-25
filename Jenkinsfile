@@ -12,18 +12,11 @@ pipeline{
     stages{
         stage('terraform init'){
             steps{
-                echo "$USER is best one"
+                echo "$USER is best one and the person who is executed id $params.person"
                 
             }
         }
-        stage('themohan credentials'){
-            environment{
-                AUTH=credentials('ssh1')
-            }
-            steps{
-                echo "$AUTH"
-            }
-        }
+      
    
 
     }

@@ -1,5 +1,5 @@
 pipeline{
-    agent { node { label 'mohan'}}
+    agent any
     stages{
         stage('install the dependencies'){
             steps{

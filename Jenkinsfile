@@ -9,6 +9,15 @@ pipeline{
                 sh 'sudo npm install'
             }
         }
+        stage('getting the version'){
+            steps{
+                script[
+                    def pversion= readJSON(file: 'package.json')
+                    packageversion=pversion.version
+                    echo "the version is $packageversion"
+                ]
+            }
+        }
        stage('zipping stage'){
              steps{
                 echo 'building the package'
